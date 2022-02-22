@@ -1,0 +1,73 @@
+/* Header */
+header {
+  position: absolute;
+  z-index: 1;
+  background-color: transparent;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.logo i {
+  color: #35a22c;
+  font-size: 2.5rem;
+}
+
+.logo span {
+  font-size: 1rem;
+  font-family: "HIND", sans-serif;
+  font-weight: 400;
+}
+
+.menu li {
+  margin: 0 15px;
+}
+
+.menu li::after {
+  content: "";
+  background-color: #35a22c;
+  width: 0;
+  height: 5px;
+  display: block;
+  transition: all 0.5s;
+}
+
+.menu li.active::after {
+  width: 100%;
+}
+
+.menu li:hover::after {
+  width: 100%;
+}
+
+/* Carausel */
+.carousel-item {
+  /* vh: độ cao tương đối */
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+.carousel-item:nth-child(1) {
+  background-image: url("./../image/finland.jpg");
+}
+
+.carousel-item:nth-child(2) {
+  background-image: url("./../image/mountains.jpg");
+}
+
+.carousel-item:nth-child(3) {
+  background-image: url("./../image/mountains-1.jpg");
+}
+
+.carausel__thumb {
+  width: 140px;
+  margin: auto;
+}
+
+.carausel__thumb img {
+  border-radius: 50%;
+}
+
+.carousel-caption {
+  /* Muốn canh giữa tự động theo position */
+  top: 50%;
+  transform: translateY(-50%);
+}
